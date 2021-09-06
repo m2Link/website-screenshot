@@ -56,18 +56,18 @@ async def feedback(_, message: Message) -> None:
             [
                 [
                     InlineKeyboardButton(
-                        "👨🏻‍🦯 Source",
-                        url="https://github.com/alenpaul2001/Web-Screenshot-Bot",
+                        "Channel🔰",
+                        url="https://t.me/m2botz",
                     ),
                     InlineKeyboardButton(
-                        "❓ Bug Report",
-                        url="https://github.com/alenpaul2001/Web-Screenshot-Bot/issues",
+                        "Bug Report🐞",
+                        url="https://t.me/m2botzsupport",
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "🌃 Profile Icon Credit",
-                        url="https://www.goodfon.com/wallpaper/art-vector-background-illustration-minimalism-angga-tanta-12.html",
+                        "Developer",
+                        url="https://t.me/ask_admin01",
                     )
                 ],
             ]

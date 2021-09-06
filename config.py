@@ -16,4 +16,4 @@ class Config:
     EXEC_PATH = os.environ.get("GOOGLE_CHROME_SHIM", None)
     # OPTIONAL
     LOG_GROUP = init_log()
-    SUPPORT_GROUP_LINK = os.environ.get("SUPPORT_GROUP", "https://t.me/bytessupport")
+    SUPPORT_GROUP_LINK = os.environ.get("SUPPORT_GROUP", "https://t.me/m2botzsupport")

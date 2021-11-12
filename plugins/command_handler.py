@@ -49,7 +49,7 @@ async def start(_, message: Message) -> None:
              InlineKeyboardButton("🗣 Support Group", url="https://t.me/m2botzsupport")
              ],[
              InlineKeyboardButton("😎About", callback_data="about_cb"),
-             InlineKeyboardButton("Help", callback_data="help_cb")]]
+             InlineKeyboardButton("🤔Help", callback_data="help_cb")]]
               
         ),
     )
@@ -80,6 +80,32 @@ async def feedback(_, message: Message) -> None:
             ]
         ),
     )
+
+
+@WebshotBot.on_message(filters.command(["help", "howtouse"]))
+async def howtouse(_, message: Message) -> None:
+    await message.reply_text(
+        text="This project is open ❤️ source",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "Channel🔰",
+                        url="https://t.me/m2botz",
+                    ),
+                    InlineKeyboardButton(
+                        "Bug Report🐞",
+                        url="https://t.me/m2botzsupport",
+                    ),
+                ],
+                [
+                    InlineKeyboardButton(
+                        "Developer",
+                        url="https://t.me/ask_admin01",
+                    )
+                ],
+            ]
+        ),
 
 
 @WebshotBot.on_message(

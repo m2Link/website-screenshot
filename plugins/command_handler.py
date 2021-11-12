@@ -55,6 +55,33 @@ async def start(_, message: Message) -> None:
     )
 
 
+WebshotBot.on_message(filters.command(["help"]))
+async def help(_, message: Message) -> None:
+    await message.reply_text(
+        text="❓ How to use this bot \n \n➤ Send any link to me. \nNote: Link must start with http(s)\n \n➤ Select your preferred settings first. \n \n➤ Then Tap on Start ScreenShot 📸",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "💬 Update Channel",
+                        url="https://t.me/m2botz",
+                    ),
+                    InlineKeyboardButton(
+                        "🗣 Support Group",
+                        url="https://t.me/m2botzsupport",
+                    ),
+                ],
+                [
+                    InlineKeyboardButton(
+                        "🧑‍💻Developer",
+                        url="https://t.me/ask_admin01",
+                    )
+                ],
+            ]
+        ),
+
+
+
 @WebshotBot.on_message(filters.command(["about", "feedback"]))
 async def feedback(_, message: Message) -> None:
     await message.reply_text(
@@ -80,32 +107,6 @@ async def feedback(_, message: Message) -> None:
             ]
         ),
     )
-
-
-@WebshotBot.on_message(filters.command(["help"]))
-async def help(_, message: Message) -> None:
-    await message.reply_text(
-        text="❓ How to use this bot \n \n➤ Send any link to me. \nNote: Link must start with http(s)\n \n➤ Select your preferred settings first. \n \n➤ Then Tap on Start ScreenShot 📸",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "💬 Update Channel",
-                        url="https://t.me/m2botz",
-                    ),
-                    InlineKeyboardButton(
-                        "🗣 Support Group",
-                        url="https://t.me/m2botzsupport",
-                    ),
-                ],
-                [
-                    InlineKeyboardButton(
-                        "🧑‍💻Developer",
-                        url="https://t.me/ask_admin01",
-                    )
-                ],
-            ]
-        ),
 
 
 @WebshotBot.on_message(

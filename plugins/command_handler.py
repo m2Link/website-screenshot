@@ -84,7 +84,7 @@ async def help(_, message: Message) -> None:
 @WebshotBot.on_message(filters.command(["about", "feedback"]))
 async def feedback(_, message: Message) -> None:
     await message.reply_text(
-        text="ABOUT ME",
+        text="ABOUT ME \n Name",
         reply_markup=InlineKeyboardMarkup(
             [
                 [

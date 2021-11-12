@@ -156,7 +156,7 @@ async def keyboards_cb(_, callback_query: CallbackQuery):
             "Split - No" if "Yes" in current_boolean.text else "Split - Yes"
         )
         await msg.edit(
-            text="Choose the prefered settings", reply_markup=msg.reply_markup
+            text="Choose the prefered Settings ⚙️ \n \n➤ Tap on Format to toggle among PDF, PNG & JPEG \n➤ Tap on Page to toggle between Full & Partial \n➤ Tap on Scroll Site to enable scrolling \n \nAfter Chosen Settings, Tap on Start Screenshot 📸", reply_markup=msg.reply_markup
         )
 
     elif cb_data == "page":
@@ -178,7 +178,7 @@ async def keyboards_cb(_, callback_query: CallbackQuery):
             text = "No"
         msg.reply_markup.inline_keyboard[2][0].text = f"Scroll Site - {text}"
         await msg.edit(
-            text="Choose the prefered settings", reply_markup=msg.reply_markup
+            text="Choose the prefered Settings ⚙️ \n \n➤ Tap on Format to toggle among PDF, PNG & JPEG \n➤ Tap on Page to toggle between Full & Partial \n➤ Tap on Scroll Site to enable scrolling \n \nAfter Chosen Settings, Tap on Start Screenshot 📸", reply_markup=msg.reply_markup
         )
 
     elif cb_data == "options":
@@ -216,7 +216,7 @@ async def keyboards_cb(_, callback_query: CallbackQuery):
                 msg.reply_markup.inline_keyboard.pop(-3)
         msg.reply_markup.inline_keyboard[3][0]["text"] = options_to_change
         await msg.edit(
-            text="Choose the prefered settings", reply_markup=msg.reply_markup
+            text="Choose the prefered Settings ⚙️ \n \n➤ Tap on Format to toggle among PDF, PNG & JPEG \n➤ Tap on Page to toggle between Full & Partial \n➤ Tap on Scroll Site to enable scrolling \n \nAfter Chosen Settings, Tap on Start Screenshot 📸", reply_markup=msg.reply_markup
         )
 
     elif cb_data == "res":
@@ -231,7 +231,7 @@ async def keyboards_cb(_, callback_query: CallbackQuery):
             res_to_change = "resolution | 800x600"
         msg.reply_markup.inline_keyboard[4][0]["text"] = res_to_change
         await msg.edit(
-            text="Choose the prefered settings", reply_markup=msg.reply_markup
+            text="Choose the prefered Settings ⚙️ \n \n➤ Tap on Format to toggle among PDF, PNG & JPEG \n➤ Tap on Page to toggle between Full & Partial \n➤ Tap on Scroll Site to enable scrolling \n \nAfter Chosen Settings, Tap on Start Screenshot 📸", reply_markup=msg.reply_markup
         )
 
     elif cb_data == "format":
@@ -251,14 +251,14 @@ async def keyboards_cb(_, callback_query: CallbackQuery):
                 msg.reply_markup.inline_keyboard.pop(-4)
         msg.reply_markup.inline_keyboard[0][0]["text"] = format_to_change
         await msg.edit(
-            text="Choose the prefered settings", reply_markup=msg.reply_markup
+            text="Choose the prefered Settings ⚙️ \n \n➤ Tap on Format to toggle among PDF, PNG & JPEG \n➤ Tap on Page to toggle between Full & Partial \n➤ Tap on Scroll Site to enable scrolling \n \nAfter Chosen Settings, Tap on Start Screenshot 📸", reply_markup=msg.reply_markup
         )
 
     elif cb_data == "cancel":
         await callback_query.answer("Canceled your request..!")
         await msg.delete()
   
-    elif cb_data == "help_cb":
+    elif cb_data == "help":
         await msg.delete()
         await help(_, msg)
 

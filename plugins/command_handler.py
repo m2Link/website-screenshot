@@ -81,6 +81,20 @@ async def feedback(_, message: Message) -> None:
         ),
     )
 
+
+@WebshotBot.on_message(filters.command(["debug", "log"]) & filters.private)
+async def send_log(_, message: Message) -> None:
+    try:
+        sudo_user = int(os.environ["SUDO_USER"])
+        if sudo_user != message.chat.id:
+            raise Exception
+    except Exception:
+        return
+    if os.path.exists("debug.log"):
+        await message.reply_document("debug.log")
+    else:
+        await message.reply_text("file not found")
+
 @WebshotBot.on_message(filters.command(["help"]))
 async def help(_, message: Message) -> None:
     await message.reply_text(
@@ -105,17 +119,4 @@ async def help(_, message: Message) -> None:
                 ],
             ]
         ),
-
-@WebshotBot.on_message(filters.command(["debug", "log"]) & filters.private)
-async def send_log(_, message: Message) -> None:
-    try:
-        sudo_user = int(os.environ["SUDO_USER"])
-        if sudo_user != message.chat.id:
-            raise Exception
-    except Exception:
-        return
-    if os.path.exists("debug.log"):
-        await message.reply_document("debug.log")
-    else:
-        await message.reply_text("file not found")
 

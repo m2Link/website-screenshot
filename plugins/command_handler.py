@@ -49,7 +49,7 @@ async def start(_, message: Message) -> None:
              InlineKeyboardButton("🗣 Support Group", url="https://t.me/m2botzsupport")
              ],[
              InlineKeyboardButton("😎About", callback_data="about_cb"),
-             InlineKeyboardButton("🤔Help", callback_data="help_cb")]]
+             InlineKeyboardButton("🤔Help", callback_data="help")]]
               
         ),
     )

@@ -185,9 +185,9 @@ async def keyboards_cb(_, callback_query: CallbackQuery):
         current_option = msg.reply_markup.inline_keyboard[3][0].text
         current_format = msg.reply_markup.inline_keyboard[0][0].text
         options_to_change = (
-            "hide additional options ˄"
+            "Hide Additional Options🔼"
             if "show" in current_option
-            else "show additional options ˅"
+            else "Show Additional Options🔽"
         )
         if "hide" in options_to_change:
             msg.reply_markup.inline_keyboard.insert(
@@ -207,7 +207,7 @@ async def keyboards_cb(_, callback_query: CallbackQuery):
                 -2,
                 [
                     InlineKeyboardButton(
-                        text="▫️ site statitics ▫️", callback_data="statics"
+                        text="▫️ Site Statitics ▫️", callback_data="statics"
                     )
                 ],
             )

@@ -261,3 +261,8 @@ async def keyboards_cb(_, callback_query: CallbackQuery):
     elif cb_data == "about_cb":
         await msg.delete()
         await feedback(_, msg)
+  
+    elif cb_data == "help_cb":
+        await msg.delete()
+        await help(_, msg)
+

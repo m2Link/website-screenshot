@@ -65,7 +65,7 @@ async def feedback(_, message: Message) -> None:
                     InlineKeyboardButton(
                         "Channel🔰",
                         url="https://t.me/m2botz",
-                    ),
+                    ), 
                     InlineKeyboardButton(
                         "Bug Report🐞",
                         url="https://t.me/m2botzsupport",
@@ -82,8 +82,8 @@ async def feedback(_, message: Message) -> None:
     )
 
 
- @WebshotBot.on_message(filters.command(["help", "howtouse"]))
-async def howtouse(_, message: Message) -> None:
+ @WebshotBot.on_message(filters.command(["help", "feedback1"]))
+async def feedback1(_, message: Message) -> None:
     await message.reply_text(
         text="This project is open ❤️ source",
         reply_markup=InlineKeyboardMarkup(

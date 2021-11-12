@@ -14,7 +14,7 @@ import os
 async def checker(_, message: Message):
     msg = await message.reply_text("working", True)
     await msg.edit(
-        text="Choose the prefered settings",
+        text="Choose the prefered Settings ⚙️ \n \n➤ Tap on Format to toggle among PDF, PNG & JPEG \n➤ Tap on Page to toggle between Full & Partial \n➤ Tap on Scroll Site to enable scrolling \n \nAfter Chosen Settings, Tap on Start Screenshot 📸",
         reply_markup=InlineKeyboardMarkup(
             [
                 [InlineKeyboardButton(text="🖼️Format - PDF", callback_data="format")],
@@ -49,7 +49,7 @@ async def start(_, message: Message) -> None:
              InlineKeyboardButton("🗣 Support Group", url="https://t.me/m2botzsupport")
              ],[
              InlineKeyboardButton("😎About", callback_data="about_cb"),
-             InlineKeyboardButton("🤔Help", callback_data="help_cb")]]
+             InlineKeyboardButton("🤔Help", callback_data="help")]]
               
         ),
     )

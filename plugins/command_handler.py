@@ -82,7 +82,7 @@ async def feedback(_, message: Message) -> None:
     )
 
 
-@WebshotBot.on_message(filters.command(["help", "howtouse"]))
+ @WebshotBot.on_message(filters.command(["help", "howtouse"]))
 async def howtouse(_, message: Message) -> None:
     await message.reply_text(
         text="This project is open ❤️ source",

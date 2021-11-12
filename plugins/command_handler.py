@@ -17,20 +17,20 @@ async def checker(_, message: Message):
         text="Choose the prefered settings",
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton(text="Format - PDF", callback_data="format")],
-                [InlineKeyboardButton(text="Page - Full", callback_data="page")],
-                [InlineKeyboardButton(text="Scroll Site - No", callback_data="scroll")],
+                [InlineKeyboardButton(text="🖼️Format - PDF", callback_data="format")],
+                [InlineKeyboardButton(text="📃Page - Full", callback_data="page")],
+                [InlineKeyboardButton(text="🖱Scroll Site - No", callback_data="scroll")],
                 [
                     InlineKeyboardButton(
-                        text="show additional options ˅", callback_data="options"
+                        text="Show Additional Options🔽", callback_data="options"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        text="▫️ start render ▫️", callback_data="render"
+                        text="Start ScreenShot📸", callback_data="render"
                     )
                 ],
-                [InlineKeyboardButton(text="cancel", callback_data="cancel")],
+                [InlineKeyboardButton(text="✖️Cancel", callback_data="cancel")],
             ]
         ),
     )
@@ -40,10 +40,16 @@ async def checker(_, message: Message):
 async def start(_, message: Message) -> None:
     await message.reply_text(
         f"<b>Hi {message.from_user.first_name} 👋\n"
-        "I can take 📸 Screenshot of Website of a given link to either PDF or PNG/JPEG with many additional features. \n \n Just Send me link (must start with http(s)) to start capturing screenshot of website</b>",
+        "I can take 📸 Screenshot of Website of a given link to either PDF or PNG/JPEG with many additional features. \n \nJust Send me link (must start with http(s)) to start capturing screenshot of website</b>",
         quote=True,
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("❓ About", callback_data="about_cb")]]
+            [[InlineKeyboardButton("🧑‍💻Developer", url="https://t.me/ask_admin01")
+             ],[
+             InlineKeyboardButton("💬 Update Channel", url="https://t.me/m2botz"),
+             InlineKeyboardButton("🗣 Support Group", url="https://t.me/m2botzsupport")
+             ],[
+             InlineKeyboardButton("
+              
         ),
     )
 

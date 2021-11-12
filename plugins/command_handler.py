@@ -40,7 +40,7 @@ async def checker(_, message: Message):
 async def start(_, message: Message) -> None:
     await message.reply_text(
         f"<b>Hi {message.from_user.first_name} 👋\n"
-        "I can take 📸 Screenshot of Website of a given link to either PDF or PNG/JPEG with many additional features.\n\n
+        "I can take 📸 Screenshot of Website of a given link to either PDF or PNG/JPEG with many additional features.\n
          Just Send me link (must start with http(s)) to start capturing screenshot of website</b>",
         quote=True,
         reply_markup=InlineKeyboardMarkup(

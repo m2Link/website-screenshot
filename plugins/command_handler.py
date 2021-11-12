@@ -148,3 +148,4 @@ async def help(_, message: Message) -> None:
                 ],
             ]
         ),
+    )

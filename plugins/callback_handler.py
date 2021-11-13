@@ -21,12 +21,12 @@ async def primary_cb(client: WebshotBot, callback_query: CallbackQuery):
     printer.allocate_folder(
         callback_query.message.chat.id, callback_query.message.message_id
     )
-    await message.edit("**Please Wait...**")
+    await message.edit("**please wait you are in a queue...**")
     try:
         future, wait_event = client.new_request(printer, callback_query.message.chat.id)
         await wait_event.wait()
         await message.edit(
-            "**📸 Screenshot the Website...**",
+            "**rendering the website...**",
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton("Render Now", "release")]]
             )
@@ -121,7 +121,7 @@ async def keyboards_cb(_, callback_query: CallbackQuery):
             "Split - No" if "Yes" in current_boolean.text else "Split - Yes"
         )
         await msg.edit(
-            text="Choose the prefered settings", reply_markup=msg.reply_markup
+            text="Choose the prefered Settings ⚙️ \n \n➤ Tap on Format to toggle among PDF, PNG & JPEG \n➤ Tap on Page to toggle between Full & Partial \n➤ Tap on Scroll Site to enable scrolling \n \nAfter Chosen Settings, Tap on Start Screenshot 📸", reply_markup=msg.reply_markup
         )
 
     elif cb_data == "page":
